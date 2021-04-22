@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <title>Data Pembayaran UKT Mahasiswa UPI</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" style="color: white;">Data Pembayaran UKT Mahasiswa UPI</a>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <div style="margin-left: 5%">
+        <form action="index.php" method="POST">
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="tnim">NIM</label>
+                    <input type="text" class="form-control" name="tnim" placeholder="Masukan NIM" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="tnama">Nama</label>
+                    <input class="form-control" type="text" name="tnama" placeholder="Masukan Nama" required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="tjk">Jenis Kelamin</label>
+                    <div class="col-sm-10">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tjk" id="tjk1" value="Perempuan" />
+                            <label class="form-check-label" for="tjk1">Perempuan</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="tjk" id="tjk2" value="Laki - Laki" />
+                            <label class="form-check-label" for="tjk2">Laki - Laki</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="tprodi">Program Studi</label>
+                    <input class="form-control" type="text" name="tprodi" placeholder="Masukan Program Studi" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="tjenjang">Jenjang</label>
+                    <select class="form-control" name="tjenjang" id="tjenjang">
+                        <option name="tjenjang" id="tjenjang1">Diploma</option>
+                        <option name="tjenjang" id="tjenjang2">Sarjana (S1)</option>
+                        <option name="tjenjang" id="tjenjang3">Magister (S2)</option>
+                        <option name="tjenjang" id="tjenjang4">Doktor (S3)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="tjumlah">Jumlah UKT</label>
+                    <input class="form-control" type="text" name="tjumlah" placeholder="Masukan Jumlah UKT" required />
+                </div>
+            </div>
+
+            <button type="submit" name="add" class="btn btn-info">Tambah Data</button>
+        </form>
+    </div>
+
+    <br>
+    <div style="margin-left:5%">
+    <br>
+    <br>
+    <div style="display: inline-block; ">
+        <h2>Daftar Mahasiswa</h2>
+        <table class="table table-bordered table-hover">
+            <br>
+            <thead class="thead-dark">
+                <tr style="text-align: center;">
+                    <th>No</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Program Studi</th>
+                    <th>Jenjang</th>
+                    <th>Jumlah</th>
+                    <th>Status</th>
+                    <th colspan='2'>Keterangan</th>
+                </tr>
+                </thead>
+            <tbody>
+                <tr> 
+                    DATA_TABEL
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+</html>
